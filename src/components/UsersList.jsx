@@ -7,6 +7,8 @@ import Button from './Button';
 export const UsersList = () => {
   const [isLoadingUsers, setIsLoadingUsers] = useState(false);
   const [loadingUsersError, setLoadingUsersError] = useState(null);
+  const [isCreatignUser, setIsCreatingUser] = useState(false);
+  const [creatingUserError, setCreatingUserError] = useState(null);
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users.data);
 
@@ -19,13 +21,17 @@ export const UsersList = () => {
   }, []);
 
   const addUserHandler = () => {
-    dispatch(addUser());
+    setIsCreatingUser(true);
+    dispatch(addUser())
+      .unwrap()
+      .catch((err) => setCreatingUserError(err))
+      .finally(() => setIsCreatingUser(false));
   };
   if (isLoadingUsers) {
     return <Skeleton times={users.length} className={'h-10 w-full'} />;
   }
   if (loadingUsersError) {
-    return <div>{loadingUsersError}</div>;
+    return <div>Error fetching data!</div>;
   }
 
   const renderedUsers = users.map((user) => {
@@ -41,7 +47,12 @@ export const UsersList = () => {
     <div className="container mx-auto">
       <div className="flex flex-row justify-between m-3">
         <h1 className="m-2 text-xl">Users</h1>
-        <Button onClick={addUserHandler}>+ Add User</Button>
+        {isCreatignUser ? (
+          'Creating User..'
+        ) : (
+          <Button onClick={addUserHandler}>+ Add User</Button>
+        )}
+        {creatingUserError && 'Error creating user!'}
       </div>
       <h1>{renderedUsers}</h1>
     </div>
