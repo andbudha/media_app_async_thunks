@@ -18,9 +18,19 @@ export const UsersList = () => {
   if (error) {
     return <div>Fetching data failed...</div>;
   }
+
+  const renderedUsers = users.map((user) => {
+    return (
+      <div key={user.id} className="mb-2 border rounded">
+        <div className="flex p-2 justify-between items-center cursor-pointer">
+          {user.name}
+        </div>
+      </div>
+    );
+  });
   return (
     <div className="container mx-auto">
-      <h1>{users.length}</h1>
+      <h1>{renderedUsers}</h1>
     </div>
   );
 };
