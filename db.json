@@ -1,7 +1,18 @@
 {
   "users": [
-    {"id": 1, "name":"Mihai"}
+    {
+      "id": 1,
+      "name": "Mihai"
+    },
+    {
+      "name": "Tomas Lockman",
+      "id": 2
+    },
+    {
+      "name": "Elmer O'Hara",
+      "id": 3
+    }
   ],
-  "albums":[],
-  "photos":[]
+  "albums": [],
+  "photos": []
 }
