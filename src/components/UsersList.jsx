@@ -13,7 +13,7 @@ export const UsersList = () => {
   }, []);
 
   if (isLoading) {
-    return <Skeleton times={4} />;
+    return <Skeleton times={6} className={'h-10 w-full'} />;
   }
   if (error) {
     return <div>Fetching data failed...</div>;
