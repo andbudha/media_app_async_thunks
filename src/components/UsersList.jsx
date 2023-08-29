@@ -40,11 +40,9 @@ export const UsersList = () => {
     <div className="container mx-auto">
       <div className="flex flex-row justify-between m-3">
         <h1 className="m-2 text-xl">Users</h1>
-        {isCreatingUser ? (
-          'Creating User..'
-        ) : (
-          <Button onClick={addUserHandler}>+ Add User</Button>
-        )}
+        <Button onClick={addUserHandler} loading={isCreatingUser}>
+          + Add User
+        </Button>
         {creatingUserError && 'Error creating user!'}
       </div>
       <h1>{renderedUsers}</h1>
