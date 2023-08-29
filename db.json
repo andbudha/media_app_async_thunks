@@ -1,10 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Mihai"
-    },
-    {
       "name": "Tomas Lockman",
       "id": 2
     },
