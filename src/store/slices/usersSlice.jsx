@@ -37,6 +37,7 @@ const usersSlice = createSlice({
       state.isLoading = true;
     });
     builder.addCase(deleteUser.fulfilled, (state, action) => {
+      state.isLoading = false;
       //fix me
     });
     builder.addCase(deleteUser.rejected, (state, action) => {
