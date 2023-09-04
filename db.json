@@ -13,14 +13,14 @@
       "id": 7
     },
     {
-      "name": "Lucy Cole",
-      "id": 8
+      "name": "Christopher Shanahan",
+      "id": 9
     }
   ],
   "albums": [
     {
       "id": 10,
-      "title":"Holiday Fotos",
+      "title": "Holiday Fotos",
       "userId": 4
     }
   ],
