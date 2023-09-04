@@ -28,9 +28,11 @@ export const AlbumsList = ({ user }) => {
 
   return (
     <div>
-      <div>
-        Albums for {user.name}
-        <Button onClick={addAlbumHandler}>+Add Album</Button>
+      <div className="m-2 flex flex-row items-center justify-between">
+        <h3 className="text-lg font-bold">Albums for {user.name}</h3>
+        <Button onClick={addAlbumHandler} loading={results.isLoading}>
+          +Add Album
+        </Button>
       </div>
       <div>{content}</div>
     </div>

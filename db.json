@@ -8,7 +8,6 @@
       "name": "Hattie Mayert",
       "id": 5
     }
-  
   ],
   "albums": [
     {
@@ -20,6 +19,11 @@
       "userId": 4,
       "title": "Tasty Plastic Hat",
       "id": 11
+    },
+    {
+      "userId": 4,
+      "title": "Incredible Fresh Chicken",
+      "id": 12
     }
   ],
   "photos": []
