@@ -11,19 +11,14 @@
   ],
   "albums": [
     {
-      "userId": 4,
-      "title": "Incredible Fresh Chicken",
-      "id": 12
+      "userId": 5,
+      "title": "Incredible Metal Shoes",
+      "id": 17
     },
     {
       "userId": 4,
-      "title": "Practical Concrete Mouse",
-      "id": 13
-    },
-    {
-      "userId": 4,
-      "title": "Electronic Rubber Sausages",
-      "id": 14
+      "title": "Electronic Metal Cheese",
+      "id": 18
     }
   ],
   "photos": []
