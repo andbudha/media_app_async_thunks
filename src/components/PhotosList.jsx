@@ -14,7 +14,7 @@ export const PhotosList = ({ album }) => {
 
   let content;
   if (isFetching) {
-    content = <Skeleton className={'h-8 w-8'} times={data.length} />;
+    content = <Skeleton className={'h-8 w-8'} times={3} />;
   } else if (error) {
     content = <div>Error fetching phtos...</div>;
   } else {
@@ -30,7 +30,9 @@ export const PhotosList = ({ album }) => {
           + Add Photo
         </Button>
       </div>
-      <div>{content}</div>
+      <div className="mx-8 flex flex-row flex-wrap justify-center">
+        {content}
+      </div>
     </div>
   );
 };
